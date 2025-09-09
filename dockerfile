@@ -16,7 +16,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the jar from the build stage
-COPY --from=build /app/target/bookstore-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/security-0.0.1-SNAPSHOT.jar app.jar
 
 # Run the app
 ENTRYPOINT ["java", "-jar", "app.jar"]
